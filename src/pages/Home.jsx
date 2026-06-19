@@ -22,6 +22,7 @@ export const Home = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
 

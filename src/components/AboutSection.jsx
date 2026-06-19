@@ -36,12 +36,19 @@ export const AboutSection = () => {
 
           {/* Text */}
           <div className="space-y-4 text-left">
-            <h3 className="text-2xl font-semibold">A bit more about me... </h3>
+            <h3 className="text-2xl font-semibold">About me... </h3>
             <p className="text-muted-foreground">
-            I’m a Colombian engineer and researcher focused on how Space and Energy technologies can drive peace and resilience in underserved regions. I earned a full-ride at New York University presenting a prototype of a solar-powered autonomous greenhouse tackling food insecurity in rural Colombia — merging renewables, automation, and remote sensing to empower vulnerable farmers.
+            I am a Colombian engineer and researcher fascinated by how technology can move from powerful ideas to real systems that serve people. 
             </p>
             <p className="text-muted-foreground">
-            At New York University, my research has spanned microfluidic oil analysis for automated diagnostics, urban wind harvesting with microturbines, and digital twins for power grid resilience. I work at the intersection of hardware, intelligence, and infrastructure, translating ideas into deployable systems — from smart diagnostics that improve equipment longevity, to distributed energy solutions that rethink access for the Global South. My vision is to engineer a future where satellites, semiconductors, and solar arrays form the backbone of a safer and interconnected world.
+            I studied Mechanical Engineering at New York University, to build engineering systems aimed to bring advanced technology closer to the frontlines, from food security in rural communities to low-cost diagnostics and resilient energy infrastructure. 
+            </p>
+
+            <p className="text-muted-foreground">
+            At NYU, my work has explored microfluidic systems for low-cost diagnostics, urban energy harvesting, and infrastructure resilience through data-driven models. I’m drawn to the intersection of hardware, intelligence, and real-world deployment, where engineering stops being theoretical and starts becoming usable. 
+            </p>
+            <p className="text-muted-foreground">
+            More than anything, I care about building systems that do not just work in the lab, but can actually make an impact.
             </p>
           </div>
         </div>
@@ -50,16 +57,16 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              My Goal: Space-powered energy for every corner of the Americas.
-            </h3>
+            My Goal: Space-powered energy for every corner of the Americas            </h3>
+            <p className="text-muted-foreground">
+            I’m a Mechanical Engineering graduate from NYU, working at the intersection of aerospace, energy systems, and intelligent infrastructure — with a focus on building technologies that make the impossible possible.            </p>
 
             <p className="text-muted-foreground">
-              Mechanical Engineering graduate from NYU with hands-on experience in aerospace commissioning and safety, smart energy systems, and AI-driven diagnostics. At GCAA, I analyzed turbine failures; with ESA advisors, I helped design orbital safety systems; and at NYU, I patented a microturbine for urban wind harvesting blending PLC-SCADA automation, CNNs, and digital twins. Check my IEEE-published work on oil diagnostics.
-            </p>
+            My path has taken me through aerospace safety and turbine analysis at the GCAA, orbital systems thinking with ESA-aligned research, and microfluidic diagnostic systems and energy harvesting work at NYU. Along the way, I’ve worked with everything from mechanical failure modes in turbines to CNN-based sensing systems and digital twins for real-world environments.            </p>
 
             <p className="text-muted-foreground">
-              I engineer systems at the intersection of satellites, renewables, and intelligent control, targeting energy access for underserved regions, starting from rural farmers — the cornerstone of The Americas! — using space-enabled networks and resilient infrastructure.
-            </p>
+            What connects all of it is a single idea: systems should not only be advanced they should be deployable where they are needed most.         </p>
+
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
               <a href="#contact" className="cosmic-button">
