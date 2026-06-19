@@ -67,7 +67,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="projects/juanfcastano.pdf"
+                href="https://www.linkedin.com/in/juan-f-castano-438107204"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
