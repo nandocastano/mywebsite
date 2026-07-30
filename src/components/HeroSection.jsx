@@ -20,13 +20,12 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-          From satellite-powered diagnostics to aerodynamic turbines, I design systems to power up the world 
-, merge space with sustainability, and turn technology into a force for kindness, and global change.
+          I build thoughtful technologies that transform curiosity into reality—from aerospace and AI to sustainable systems designed to serve people.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              View My Work
+              Explore My Workshop →
             </a>
           </div>
         </div>
