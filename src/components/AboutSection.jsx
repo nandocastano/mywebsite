@@ -1,130 +1,131 @@
-import {
-  Rocket,
-  Wrench,
-  ZapIcon,
-} from "lucide-react";
+import { Rocket, Cpu, Zap } from "lucide-react";
+
+const capabilities = [
+  {
+    icon: Rocket,
+    title: "Aerospace Systems",
+    description:
+      "Satellite systems, propulsion diagnostics, mission operations, and flight-critical engineering.",
+  },
+  {
+    icon: Cpu,
+    title: "Intelligent Infrastructure",
+    description:
+      "Automation, controls, digital twins, industrial sensing, and resilient platforms.",
+  },
+  {
+    icon: Zap,
+    title: "Energy Systems",
+    description:
+      "Distributed power, turbines, urban energy, and sustainable infrastructure.",
+  },
+];
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Juan F <span className="text-primary">Castaño</span> </h2>
-          <h3 className="text-lg md:text-xl font-medium text-center text-muted-foreground leading-snug">
-            B.S. Mechanical Engineering
-          </h3>
-          <h3 className="text-lg md:text-xl font-medium text-center mb-12 text-muted-foreground">
-            New York University
-          </h3>
+    <section
+      id="about"
+      className="relative py-24 md:py-32 px-4 bg-background/70"
+    >
+      <div className="container mx-auto max-w-2xl">
+        {/* Portrait */}
+        <div className="relative w-40 sm:w-48 md:w-56 mx-auto mb-8">
+          <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden border border-border/60 bg-muted/10">
+            <img
+              src="/projects/profile.jpg"
+              alt="Juan Fernando Castaño"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <span
+            className="absolute -bottom-2 -right-4 sm:-right-10 text-[13px] text-blue-500/20 whitespace-nowrap select-none pointer-events-none -rotate-6"
+            style={{ fontFamily: "'Segoe Script', 'Bradley Hand', cursive" }}
+          >
+            Wonder comes first.
+          </span>
         </div>
 
-        
-
-        {/* 👤 NEW BLOCK: image left, text right, compact and aligned */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20">
-          {/* Image */}
-          <div className="w-full max-w-sm mx-auto md:mx-0">
-            <div className="w-full aspect-[4/5] bg-muted/10 rounded-2xl overflow-hidden shadow-md">
-              <img
-                src="/projects/profile.jpg"
-                alt="Juan Fernando Castaño"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Text */}
-          <div className="space-y-4 text-left">
-            <h3 className="text-2xl font-semibold">About me... </h3>
-            <p className="text-muted-foreground">
-            I am a Colombian engineer and researcher fascinated by how technology can move from powerful ideas to real systems that serve people. 
-            </p>
-            <p className="text-muted-foreground">
-            I studied Mechanical Engineering at New York University, to build engineering systems aimed to bring advanced technology closer to the frontlines, from food security in rural communities to low-cost diagnostics and resilient energy infrastructure. 
-            </p>
-
-            <p className="text-muted-foreground">
-            At NYU, my work has explored microfluidic systems for low-cost diagnostics, urban energy harvesting, and infrastructure resilience through data-driven models. I’m drawn to the intersection of hardware, intelligence, and real-world deployment, where engineering stops being theoretical and starts becoming usable. 
-            </p>
-            <p className="text-muted-foreground">
-            More than anything, I care about building systems that do not just work in the lab, but can actually make an impact.
-            </p>
-          </div>
+        {/* Identity */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Juan Fernando Castaño
+          </h2>
+          <p className="mt-3 text-lg md:text-xl text-muted-foreground">
+            Mechanical Engineer · Systems Builder
+          </p>
+          <p className="mt-4 max-w-md mx-auto text-muted-foreground">
+            Building technologies that move from curiosity to real-world
+            impact.
+          </p>
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground/60">
+            NYU Abu Dhabi
+          </p>
         </div>
 
-        {/* 🧑‍🎓 EXISTING BLOCK */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-            My Goal: Space-powered energy for every corner of the Americas            </h3>
-            <p className="text-muted-foreground">
-            I’m a Mechanical Engineering graduate from NYU, working at the intersection of aerospace, energy systems, and intelligent infrastructure — with a focus on building technologies that make the impossible possible.            </p>
+        {/* Philosophy */}
+        <div className="text-center mb-16 md:mb-20">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+            Why I Build
+          </h3>
+          <p className="max-w-prose mx-auto text-muted-foreground leading-relaxed">
+            I build engineering systems where hardware, intelligence, and
+            people intersect. From aerospace to resilient energy
+            infrastructure, my work focuses on transforming ambitious ideas
+            into practical solutions. I believe the best engineering isn't
+            defined by complexity—it's defined by usefulness.
+          </p>
+        </div>
 
-            <p className="text-muted-foreground">
-            My path has taken me through aerospace safety and turbine analysis at the GCAA, orbital systems thinking with ESA-aligned research, and microfluidic diagnostic systems and energy harvesting work at NYU. Along the way, I’ve worked with everything from mechanical failure modes in turbines to CNN-based sensing systems and digital twins for real-world environments.            </p>
+        {/* Mission */}
+        <div className="text-center mb-16 md:mb-20">
+          <h3 className="text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-primary mb-4">
+            Mission
+          </h3>
+          <p className="text-2xl md:text-3xl font-medium leading-snug max-w-xl mx-auto">
+            Reliable, resilient infrastructure for the communities that need
+            it most.
+          </p>
+          <p className="mt-4 max-w-prose mx-auto text-muted-foreground">
+            Every project follows one principle: build technologies that
+            leave the laboratory and create measurable value in the real
+            world.
+          </p>
+        </div>
 
-            <p className="text-muted-foreground">
-            What connects all of it is a single idea: systems should not only be advanced they should be deployable where they are needed most.         </p>
-
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-              <a href="#contact" className="cosmic-button">
-                Get In Touch
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/juan-f-castano-438107204"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+        {/* Capabilities */}
+        <div className="mb-16 md:mb-20">
+          <h3 className="text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-muted-foreground text-center mb-6">
+            Capabilities
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+            {capabilities.map(({ icon: Icon, title, description }) => (
+              <div
+                key={title}
+                className="h-full flex flex-col gap-3 rounded-2xl border border-border/60 bg-card/40 p-6 transition-all duration-150 ease-out hover:-translate-y-0.5 hover:border-primary/40"
               >
-                Download CV
-              </a>
-            </div>
+                <div className="p-2.5 rounded-full bg-primary/10 w-fit">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <h4 className="font-semibold">{title}</h4>
+                <p className="text-sm text-muted-foreground leading-snug">
+                  {description}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Rocket className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Aerospace</h4>
-                  <p className="text-muted-foreground">
-                    Supported satellite safety systems, propulsion diagnostics, and orbital commissioning.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Wrench className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Control & Electrical Systems</h4>
-                  <p className="text-muted-foreground">
-                  Developed Closed-loop control automation systems integrating PLC–SCADA, sensor arrays, for fluidics and power systems.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <ZapIcon className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Power Systems</h4>
-                  <p className="text-muted-foreground">
-                  Designed microturbine energy solutions and using digital twins to optimize grid performance and resilience in underserved urban contexts.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#projects" className="cosmic-button">
+            View Projects →
+          </a>
+          <a
+            href="https://www.linkedin.com/in/juan-f-castano-438107204"
+            className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+          >
+            Download CV
+          </a>
         </div>
       </div>
     </section>
