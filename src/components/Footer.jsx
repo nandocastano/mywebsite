@@ -1,19 +1,35 @@
-import { ArrowUp } from "lucide-react";
+import { SITE } from "@/data/site";
 
-export const Footer = () => {
-  return (
-    <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-      {" "}
-      <p className="text-sm text-muted-foreground">
-        {" "}
-        &copy; {new Date().getFullYear()} JuanfCastano.com. All rights reserved.
-      </p>
-      <a
-        href="#hero"
-        className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-      >
-        <ArrowUp size={20} />
-      </a>
-    </footer>
-  );
-};
+export const Footer = () => (
+  <footer className="relative px-4 py-10 bg-card/60 border-t border-border">
+    <div className="container mx-auto max-w-5xl text-left text-sm flex flex-col gap-6 md:flex-row md:justify-between">
+      <div className="space-y-3">
+        <p className="text-foreground">
+          &copy; {new Date().getFullYear()} {SITE.name}
+        </p>
+        <p className="flex gap-6 text-foreground/60">
+          <span>{SITE.latitude}</span>
+          <span>{SITE.longitude}</span>
+        </p>
+      </div>
+
+      <div className="space-y-1 md:text-right text-foreground/70">
+        <p>
+          <a
+            href={SITE.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            LinkedIn
+          </a>
+        </p>
+        <p>
+          <a href={`mailto:${SITE.email}`} className="text-link">
+            {SITE.email}
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+);

@@ -2,12 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juan F Castaño</title>
+    <meta name="theme-color" content="#05080f" />
+
+    <!-- Apply the saved theme before first paint (dark by default) so the page never flashes light -->
+    <script>
+      try {
+        if (localStorage.getItem("theme") !== "light") {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    </script>
+
+    <title>Juan Fernando Castaño — Mechanical Engineer</title>
+    <meta
+      name="description"
+      content="Juan Fernando Castaño Molina — mechanical engineer. Aerospace, robotics, and control, with one aim: engineering with kindness."
+    />
+    <meta name="author" content="Juan Fernando Castaño Molina" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <!-- Link previews (LinkedIn, Slack, email, iMessage, X) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Juan Fernando Castaño" />
+    <meta property="og:title" content="Juan Fernando Castaño — Mechanical Engineer" />
+    <meta
+      property="og:description"
+      content="Aerospace, robotics, and control, with one aim: engineering with kindness."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Portrait of Juan Fernando Castaño" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Juan Fernando Castaño Molina",
+        "givenName": "Juan Fernando",
+        "familyName": "Castaño Molina",
+        "jobTitle": "Mechanical Engineer",
+        "url": "%VITE_SITE_URL%/",
+        "image": "%VITE_SITE_URL%/og-image.jpg",
+        "email": "mailto:jfc9577@nyu.edu",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "New York University" },
+        "sameAs": [
+          "https://www.linkedin.com/in/juan-f-castano-438107204",
+          "https://github.com/nandocastano",
+          "https://x.com/engineernando",
+          "https://www.instagram.com/engineernando/",
+          "https://www.youtube.com/@engineernando"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      Juan Fernando Castaño Molina — Mechanical Engineer. This site needs
+      JavaScript to display. Contact: jfc9577@nyu.edu
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

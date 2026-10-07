@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { StarBackground } from "@/components/StarBackground";
 
 export const HeroSection = () => {
@@ -26,7 +27,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Stars sprinkled over the photo, local to this section */}
-      <StarBackground fixed={false} density={16000} className="z-[1]" />
+      <StarBackground fixed={false} density={9000} className="z-[1]" />
 
       <div className="container max-w-3xl mx-auto text-center relative z-10">
         <div className="space-y-3 md:space-y-4">
@@ -34,7 +35,7 @@ export const HeroSection = () => {
             Hello, I&apos;m
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight opacity-0 animate-fade-in-delay-1 [text-shadow:0_4px_24px_rgba(0,0,0,0.85)]">
+          <h1 className="font-serif font-medium text-4xl sm:text-5xl md:text-7xl tracking-tight leading-tight opacity-0 animate-fade-in-delay-1 [text-shadow:0_4px_24px_rgba(0,0,0,0.85)]">
             <span className="text-primary">Juan F</span>{" "}
             <span className="text-gradient">Castaño</span>
           </h1>
@@ -44,15 +45,15 @@ export const HeroSection = () => {
           </p>
 
           <div className="pt-4 md:pt-6 opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
+            <Link to="/projects" className="cosmic-button">
               Explore My Workshop →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-10">
-        <span className="text-sm text-white/70 mb-2 [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]"> Scroll </span>
+        <span className="text-sm text-white/70 light:text-foreground/70 mb-2 [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] light:[text-shadow:none]"> Scroll </span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
     </section>
