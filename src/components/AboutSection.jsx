@@ -130,45 +130,59 @@ export const AboutSection = () => {
         ))}
       </div>
 
-      {/* My Heroes */}
-      <div className="mb-14 md:mb-16">
+      {/* My Heroes — intro, heroes and closing share one three-column grid */}
+      <div className="mb-14 md:mb-16 text-left">
         <SectionHeader title="My Heroes" />
 
-        <div className="mt-6 max-w-3xl space-y-4 text-left text-muted-foreground leading-relaxed">
-          <p>I’ve always been drawn to people who make things.</p>
-          <p>
-            Some build machines, some write songs, some paint, some think about
-            problems nobody else has thought about, and some simply find a way
-            to be good to the people around them. What they have in common, at
-            least for me, is not fame or success. It is the way they choose to
-            spend their lives.
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-6">
+          <p className="font-serif text-2xl md:text-3xl leading-snug tracking-tight text-balance">
+            I’ve always been drawn to people who make things.
           </p>
-          <p>
-            These are people who remind me that a life can be devoted to{" "}
-            <strong className="font-semibold text-foreground">
-              making, discovering, understanding, loving, and leaving something
-              good behind.
-            </strong>
-          </p>
+          <div className="lg:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Some build machines, some write songs, some paint, some think
+              about problems nobody else has thought about, and some simply
+              find a way to be good to the people around them. What they have
+              in common, at least for me, is not fame or success. It is the way
+              they choose to spend their lives.
+            </p>
+            <p>
+              These are people who remind me that a life can be devoted to{" "}
+              <strong className="font-semibold text-foreground">
+                making, discovering, understanding, loving, and leaving
+                something good behind.
+              </strong>
+            </p>
+          </div>
         </div>
 
-        <ul className="mt-8">
-          {heroes.map((hero) => (
+        <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10">
+          {heroes.map((hero, index) => (
             <li
               key={hero.name}
-              className="grid grid-cols-1 md:grid-cols-[15rem_1fr] md:items-baseline gap-x-8 gap-y-1 py-4 border-b border-border text-left first:border-t"
+              className="group border-t border-border pt-5 pb-9 transition-colors duration-150 hover:border-primary/50"
             >
-              <h3 className="item-title">{hero.name}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="flex items-baseline gap-3">
+                <span className="font-serif text-sm tabular-nums text-primary">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="label">{hero.craft}</span>
+              </p>
+              <h3 className="mt-3 font-serif text-2xl font-medium leading-snug tracking-tight transition-colors duration-150 group-hover:text-primary">
+                {hero.name}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                 {hero.note}
               </p>
             </li>
           ))}
         </ul>
 
-        <div className="mt-8 max-w-3xl space-y-4 text-left text-muted-foreground leading-relaxed">
-          <p>I don’t expect to become any of them.</p>
-          <p>
+        <div className="mt-2 pt-10 border-t border-border grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-4">
+          <p className="font-serif text-2xl md:text-3xl leading-snug tracking-tight text-balance">
+            I don’t expect to become any of them.
+          </p>
+          <p className="lg:col-span-2 text-muted-foreground leading-relaxed">
             I just hope to carry a little of what they each remind me of:{" "}
             <strong className="font-semibold text-foreground">
               to stay curious, to work hard, to make beautiful things, to be
