@@ -1,4 +1,8 @@
-import { Rocket, Cpu, Zap } from "lucide-react";
+import { Rocket, Cpu, SlidersHorizontal } from "lucide-react";
+import { Link } from "react-router-dom";
+import { PageSection } from "@/components/Page";
+import { CV_BUTTON_LABEL, CV_URL } from "@/data/cv";
+import { SITE } from "@/data/site";
 
 const capabilities = [
   {
@@ -14,101 +18,134 @@ const capabilities = [
       "Automation, controls, ROS, digital twins, industrial sensing, and resilient platforms.",
   },
   {
-    icon: Zap,
-    title: "Energy Systems",
+    icon: SlidersHorizontal,
+    title: "Control & Intelligent Systems",
     description:
-      "Distributed power, turbines, urban energy, and sustainable infrastructure.",
+      "Stochastic control, estimation, Kalman filtering, PID/MPC, system identification, optimization, sensor fusion, and control of physical and microfluidic systems.",
   },
 ];
 
 export const AboutSection = () => {
   return (
-    <section
-      id="about"
-      className="relative py-24 md:py-28 px-4 bg-background/70"
-    >
-      <div className="container mx-auto max-w-5xl">
-        {/* Identity */}
-        <div className="text-center mb-14 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Juan Fernando <span className="text-primary">Castaño</span>
-          </h2>
-          <p className="mt-3 text-lg md:text-xl text-muted-foreground">
-            Mechanical Engineer · Systems Builder
-          </p>
-          <p className="mt-2 text-xs uppercase tracking-[0.2em] text-muted-foreground/60">
-            NYU Abu Dhabi
-          </p>
-        </div>
+    <PageSection id="about">
+      {/* Identity */}
+      <header className="text-center mb-14 md:mb-16">
+        <h1 className="page-title">
+          Juan Fernando <span className="text-primary">Castaño</span>
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-muted-foreground">
+          Mechanical Engineer · Systems Builder
+        </p>
+        <p className="mt-2 label">New York University</p>
+      </header>
 
-        {/* Portrait + Philosophy/Mission */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-20">
-          <div className="w-full max-w-sm mx-auto md:mx-0">
-            <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden border border-border/60">
-              <img
-                src="/projects/profile.jpg"
-                alt="Juan Fernando Castaño"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-8 text-left">
-            <div>
-              <h3 className="text-2xl font-semibold mb-3">Why I Build</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                I believe engineering is not just about inventing new
-                technology. It's about making powerful technology
-                accessible to the people who need it most. Engineering is
-                an act of creation with purpose.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg md:text-xl font-bold uppercase tracking-wide">
-                <span className="text-primary">Mission: </span>
-                Engineering with Kindness
-              </h3>
-              <p className="mt-2 text-muted-foreground">
-                Every project follows one principle: build technologies that
-                leave the laboratory and create measurable value in the real
-                world.
-              </p>
-            </div>
+      {/* Portrait + Philosophy/Mission */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 md:items-stretch mb-16 md:mb-20">
+        <div className="w-full max-w-sm mx-auto md:mx-0 md:max-w-none">
+          <div className="w-full aspect-[4/5] md:aspect-auto md:h-full md:min-h-[26rem] rounded-2xl overflow-hidden border border-border/60">
+            <img
+              src="/projects/profile-800.webp"
+              srcSet="/projects/profile-800.webp 800w, /projects/profile-1400.webp 1400w"
+              sizes="(min-width: 768px) 45vw, 90vw"
+              width="800"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+              alt="Juan Fernando Castaño"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
-        {/* Capabilities */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch mb-14 md:mb-16">
-          {capabilities.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="h-full flex flex-col gap-3 rounded-2xl border border-border/60 bg-card/40 p-6 transition-all duration-150 ease-out hover:-translate-y-0.5 hover:border-primary/40"
-            >
-              <div className="p-2.5 rounded-full bg-primary/10 w-fit">
-                <Icon className="h-5 w-5 text-primary" />
-              </div>
-              <h4 className="font-semibold">{title}</h4>
-              <p className="text-sm text-muted-foreground leading-snug">
-                {description}
+        <div className="space-y-10 text-left">
+          <div>
+            <h2 className="section-title mb-3">Why I Build</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                I’ve always been fascinated by the process of turning an idea
+                into something real.
+              </p>
+              <p>
+                That’s what engineering means to me: understanding how the
+                world works, building things, breaking them, learning, and
+                trying again, until something useful comes out of it.
+              </p>
+              <p>
+                I care about technology, but I care just as much about what we
+                choose to do with it.
               </p>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#projects" className="cosmic-button">
-            View Projects →
-          </a>
-          <a
-            href="https://www.linkedin.com/in/juan-f-castano-438107204"
-            className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-          >
-            Download CV
-          </a>
+          <div>
+            <h2 className="section-title mb-3">Where I’m From</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                I’m from Santiago de Cali, Colombia. It’s home, and it’s a
+                part of how I see the world: curious, warm, resourceful, and
+                always looking for a way to make things work.
+              </p>
+              <p>
+                Wherever engineering takes me, I want to carry that same
+                spirit with me, building things that are useful, sharing what
+                I learn, and using what I know to serve others.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="eyebrow">Mission</p>
+            <h2 className="section-title mt-2">Engineering with Kindness</h2>
+            <div className="mt-3 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                I believe we can become extraordinarily capable embracing our
+                humanity &amp; kindness.
+              </p>
+              <p>
+                For me, that means building technology that doesn’t stop at
+                the prototype or the laboratory, but finds its way into the
+                real world and makes someone’s life a little better.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+
+      {/* Capabilities */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch mb-14 md:mb-16">
+        {capabilities.map(({ icon: Icon, title, description }) => (
+          <div
+            key={title}
+            className="surface-card h-full flex flex-col gap-3 p-6 text-left md:grid md:row-span-3 md:grid-rows-subgrid md:gap-y-3"
+          >
+            <div className="p-2.5 rounded-full bg-primary/10 w-fit">
+              <Icon className="h-5 w-5 text-primary" />
+            </div>
+            <h3 className="item-title">{title}</h3>
+            <p className="text-sm text-muted-foreground leading-snug">
+              {description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+        <a href={`mailto:${SITE.email}`} className="cosmic-button">
+          Get in touch
+        </a>
+        <Link to="/projects" className="outline-button">
+          View Projects →
+        </Link>
+        <a
+          href={CV_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="outline-button"
+        >
+          {CV_BUTTON_LABEL}
+        </a>
+      </div>
+    </PageSection>
   );
 };
