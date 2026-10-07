@@ -1,7 +1,8 @@
 import { Rocket, Cpu, SlidersHorizontal } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageSection } from "@/components/Page";
+import { PageSection, SectionHeader } from "@/components/Page";
 import { CV_BUTTON_LABEL, CV_URL } from "@/data/cv";
+import { heroes } from "@/data/heroes";
 import { SITE } from "@/data/site";
 
 const capabilities = [
@@ -127,6 +128,55 @@ export const AboutSection = () => {
             </p>
           </div>
         ))}
+      </div>
+
+      {/* My Heroes */}
+      <div className="mb-14 md:mb-16">
+        <SectionHeader title="My Heroes" />
+
+        <div className="mt-6 max-w-3xl space-y-4 text-left text-muted-foreground leading-relaxed">
+          <p>I’ve always been drawn to people who make things.</p>
+          <p>
+            Some build machines, some write songs, some paint, some think about
+            problems nobody else has thought about, and some simply find a way
+            to be good to the people around them. What they have in common, at
+            least for me, is not fame or success. It is the way they choose to
+            spend their lives.
+          </p>
+          <p>
+            These are people who remind me that a life can be devoted to{" "}
+            <strong className="font-semibold text-foreground">
+              making, discovering, understanding, loving, and leaving something
+              good behind.
+            </strong>
+          </p>
+        </div>
+
+        <ul className="mt-8">
+          {heroes.map((hero) => (
+            <li
+              key={hero.name}
+              className="grid grid-cols-1 md:grid-cols-[15rem_1fr] md:items-baseline gap-x-8 gap-y-1 py-4 border-b border-border text-left first:border-t"
+            >
+              <h3 className="item-title">{hero.name}</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {hero.note}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 max-w-3xl space-y-4 text-left text-muted-foreground leading-relaxed">
+          <p>I don’t expect to become any of them.</p>
+          <p>
+            I just hope to carry a little of what they each remind me of:{" "}
+            <strong className="font-semibold text-foreground">
+              to stay curious, to work hard, to make beautiful things, to be
+              kind, and to use whatever I learn to leave the world a little
+              better than I found it.
+            </strong>
+          </p>
+        </div>
       </div>
 
       {/* CTA */}
