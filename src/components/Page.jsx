@@ -9,8 +9,10 @@ export const PageSection = ({ id, children }) => (
 );
 
 // Centered page title with an accent word, like "Featured Projects".
-export const PageHeader = ({ title, accent, description }) => (
-  <header className="text-center mb-12 md:mb-14">
+export const PageHeader = ({ title, accent, description, tight }) => (
+  <header
+    className={`text-center ${tight ? "mb-4 md:mb-5" : "mb-12 md:mb-14"}`}
+  >
     <h1 className="page-title">
       {title} <span className="text-primary">{accent}</span>
     </h1>
