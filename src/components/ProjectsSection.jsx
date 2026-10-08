@@ -14,7 +14,7 @@ const Out = ({ href, children }) => (
     rel="noopener noreferrer"
     className="text-link"
   >
-    {children} <span aria-hidden="true">↗</span>
+    {children} <span aria-hidden="true">↗︎</span>
   </a>
 );
 
@@ -23,15 +23,19 @@ const featured = projects.filter((project) => project.featured);
 
 export const ProjectsSection = () => (
   <PageSection id="projects">
-    <PageHeader title="Featured" accent="Projects" tight />
+    <PageHeader
+      title="Featured"
+      accent="Projects"
+      description="Engineering work, each with a technical report."
+      tight
+    />
 
     <ProjectCarousel projects={featured} />
 
     <div className="mt-16">
       <SectionHeader
         title="All Projects"
-        description="Every project, each with its own technical report."
-        link={{ href: REPO_URL, label: "All on GitHub ↗" }}
+        link={{ href: REPO_URL, label: "All on GitHub ↗︎" }}
       />
       <ol>
         {projects.map((project) => (
@@ -51,19 +55,8 @@ export const ProjectsSection = () => (
                   {project.title}
                 </a>
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                {project.description}
-              </p>
-              {project.result && (
-                <p className="mt-3 text-sm">
-                  <span className="label mr-2">Result</span>
-                  <span className="font-serif text-base text-primary">
-                    {project.result}
-                  </span>
-                </p>
-              )}
-              <p className="mt-3 text-sm text-foreground/60">
-                {project.tags.join(" · ")}
+              <p className="mt-2 text-muted-foreground max-w-2xl">
+                {project.summary}
               </p>
             </div>
             <div className="flex flex-wrap md:flex-col gap-x-5 gap-y-1.5 text-sm md:items-end md:pt-5 md:whitespace-nowrap">
@@ -82,7 +75,7 @@ export const ProjectsSection = () => (
         <SectionHeader
           title="Engineering Lab"
           description="Not polished — but real. Simulations, failed prototypes, research notebooks, and tools in progress."
-          link={{ href: GITHUB_URL, label: "GitHub ↗" }}
+          link={{ href: GITHUB_URL, label: "GitHub ↗︎" }}
         />
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">

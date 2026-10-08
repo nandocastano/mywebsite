@@ -2,7 +2,7 @@ import { ListRows } from "@/components/ListRows";
 import { PageHeader, PageSection, SectionHeader } from "@/components/Page";
 import { engagement } from "@/data/engagement";
 import { social } from "@/data/social";
-import { videos, YOUTUBE_CHANNEL_URL } from "@/data/videos";
+import { YOUTUBE_CHANNEL_URL } from "@/data/videos";
 
 export const Social = () => (
   <PageSection id="social">
@@ -15,19 +15,15 @@ export const Social = () => (
     <SectionHeader
       title="YouTube"
       description="My channel is on its way. Videos will live here."
-      link={{ href: YOUTUBE_CHANNEL_URL, label: "@engineernando ↗" }}
+      link={{ href: YOUTUBE_CHANNEL_URL, label: "@engineernando ↗︎" }}
     />
-    <ListRows items={videos} emptyMessage="Videos are coming soon." />
 
     <div className="mt-16">
       <SectionHeader
         title="Talks & Engagement"
         description="Talks, teaching, mentoring, and community work."
       />
-      <ListRows
-        items={engagement}
-        emptyMessage="Talks and teaching will be listed here."
-      />
+      <ListRows items={engagement} />
     </div>
 
     <div className="mt-16">

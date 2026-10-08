@@ -35,7 +35,7 @@ const Entry = ({ item }) => {
             >
               {item.title}
               {"\u00A0"}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">↗︎</span>
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
           ) : (
