@@ -1,7 +1,7 @@
 import { Github } from "lucide-react";
 import { PageHeader, PageSection, SectionHeader } from "@/components/Page";
 import { ProjectCarousel } from "@/components/ProjectCarousel";
-import { projects, repoFile, repoFolder, REPO_URL } from "@/data/projects";
+import { projects, reportUrl, repoFolder, REPO_URL } from "@/data/projects";
 import { experiments, SHOW_ENGINEERING_LAB } from "@/data/experiments";
 import { social } from "@/data/social";
 
@@ -41,7 +41,16 @@ export const ProjectsSection = () => (
           >
             <div>
               <p className="label">{project.meta}</p>
-              <h3 className="mt-1 item-title">{project.title}</h3>
+              <h3 className="mt-1 item-title">
+                <a
+                  href={reportUrl(project.slug)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  {project.title}
+                </a>
+              </h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-2xl">
                 {project.description}
               </p>
@@ -58,7 +67,7 @@ export const ProjectsSection = () => (
               </p>
             </div>
             <div className="flex flex-wrap md:flex-col gap-x-5 gap-y-1.5 text-sm md:items-end md:pt-5 md:whitespace-nowrap">
-              <Out href={repoFile(project.report)}>Report</Out>
+              <Out href={reportUrl(project.slug)}>Report</Out>
               <Out href={repoFolder(project.slug)}>Code</Out>
               {project.video && <Out href={project.video}>Video</Out>}
             </div>

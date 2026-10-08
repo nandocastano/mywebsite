@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { repoFile, repoFolder } from "@/data/projects";
+import { reportUrl, repoFolder } from "@/data/projects";
 
 const Out = ({ href, children }) => (
   <a
@@ -74,7 +74,7 @@ const Slide = ({ project, position, total, eager, active }) => (
         {project.summary}
       </p>
       <div className="pt-3 flex flex-wrap gap-x-6 gap-y-3 text-sm">
-        <Out href={repoFile(project.report)}>Report</Out>
+        <Out href={reportUrl(project.slug)}>Report</Out>
         <Out href={repoFolder(project.slug)}>Code</Out>
         {project.video && <Out href={project.video}>Video</Out>}
       </div>
