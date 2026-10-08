@@ -17,7 +17,7 @@ const facts = [
   { label: "Mission", value: "Engineering to serve the world" },
 ];
 
-const featured = projects.slice(0, 1);
+const featured = projects.filter((project) => project.featured);
 
 export const HomeIntro = () => {
   return (
@@ -108,7 +108,7 @@ export const HomeIntro = () => {
 
           {featured.map((project) => (
             <Link
-              key={project.id}
+              key={project.slug}
               to="/projects"
               className="group block py-6 border-b border-border"
             >
@@ -116,7 +116,7 @@ export const HomeIntro = () => {
                 {project.title}
               </h3>
               <p className="mt-1 text-muted-foreground max-w-2xl">
-                {project.description}
+                {project.summary}
               </p>
               <p className="mt-2 text-sm text-foreground/60">
                 {project.tags.join(" · ")}
