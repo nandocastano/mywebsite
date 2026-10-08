@@ -21,6 +21,9 @@ export const repoFolder = (slug) => `${REPO_URL}/tree/main/${slug}`;
 export const repoFile = (path) =>
   `${REPO_URL}/blob/main/${path.split("/").map(encodeURIComponent).join("/")}`;
 
+// The report PDF, served from this site so it opens in the browser's viewer.
+export const reportUrl = (slug) => `/reports/${slug}.pdf`;
+
 export const projects = [
   {
     slug: "vawt-traffic-wind-harvester",
