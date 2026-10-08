@@ -23,14 +23,18 @@ const featured = projects.filter((project) => project.featured);
 
 export const ProjectsSection = () => (
   <PageSection id="projects">
-    <PageHeader title="Featured" accent="Projects" tight />
+    <PageHeader
+      title="Featured"
+      accent="Projects"
+      description="Engineering work, each with a technical report."
+      tight
+    />
 
     <ProjectCarousel projects={featured} />
 
     <div className="mt-16">
       <SectionHeader
         title="All Projects"
-        description="Every project, each with its own technical report."
         link={{ href: REPO_URL, label: "All on GitHub ↗︎" }}
       />
       <ol>
@@ -51,19 +55,8 @@ export const ProjectsSection = () => (
                   {project.title}
                 </a>
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                {project.description}
-              </p>
-              {project.result && (
-                <p className="mt-3 text-sm">
-                  <span className="label mr-2">Result</span>
-                  <span className="font-serif text-base text-primary">
-                    {project.result}
-                  </span>
-                </p>
-              )}
-              <p className="mt-3 text-sm text-foreground/60">
-                {project.tags.join(" · ")}
+              <p className="mt-2 text-muted-foreground max-w-2xl">
+                {project.summary}
               </p>
             </div>
             <div className="flex flex-wrap md:flex-col gap-x-5 gap-y-1.5 text-sm md:items-end md:pt-5 md:whitespace-nowrap">
