@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { reportUrl, repoFolder } from "@/data/projects";
 
 const Out = ({ href, children }) => (
@@ -142,7 +142,7 @@ export const ProjectCarousel = ({ projects }) => {
   };
 
   const buttonClass =
-    "flex items-center justify-center h-9 w-9 rounded-full border border-border text-foreground/70 transition-colors duration-150 hover:border-primary/50 hover:text-primary";
+    "flex items-center justify-center h-8 w-8 rounded-full bg-foreground text-background transition-opacity duration-150 hover:opacity-70";
 
   return (
     <section
@@ -180,7 +180,7 @@ export const ProjectCarousel = ({ projects }) => {
               aria-label="Previous project"
               className={buttonClass}
             >
-              <ChevronLeft size={18} />
+              <ArrowLeft size={15} />
             </button>
             <button
               type="button"
@@ -188,7 +188,7 @@ export const ProjectCarousel = ({ projects }) => {
               aria-label="Next project"
               className={buttonClass}
             >
-              <ChevronRight size={18} />
+              <ArrowRight size={15} />
             </button>
           </div>
         </div>
