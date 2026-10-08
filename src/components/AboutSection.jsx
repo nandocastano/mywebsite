@@ -20,9 +20,9 @@ const capabilities = [
   },
   {
     icon: SlidersHorizontal,
-    title: "Control & Intelligent Systems",
+    title: "Control Systems",
     description:
-      "Stochastic control, estimation, Kalman filtering, PID/MPC, system identification, optimization, sensor fusion, and control of physical and microfluidic systems.",
+      "Stochastic control, Kalman filtering, PID/MPC, system identification, and sensor fusion.",
   },
 ];
 
@@ -67,9 +67,9 @@ export const AboutSection = () => {
                 into something real.
               </p>
               <p>
-                That’s what engineering means to me: understanding how the
-                world works, building things, breaking them, learning, and
-                trying again, until something useful comes out of it.
+                That’s what engineering means to me: understanding how the world
+                works, building things, breaking them, learning, and trying
+                again, until something useful comes out of it.
               </p>
               <p>
                 I care about technology, but I care just as much about what we
@@ -82,14 +82,14 @@ export const AboutSection = () => {
             <h2 className="section-title mb-3">Where I’m From</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I’m from Santiago de Cali, Colombia. It’s home, and it’s a
-                part of how I see the world: curious, warm, resourceful, and
-                always looking for a way to make things work.
+                I’m from Santiago de Cali, Colombia. It’s home, and it’s a part
+                of how I see the world: curious, warm, resourceful, and always
+                looking for a way to make things work.
               </p>
               <p>
-                Wherever engineering takes me, I want to carry that same
-                spirit with me, building things that are useful, sharing what
-                I learn, and using what I know to serve others.
+                Wherever engineering takes me, I want to carry that same spirit
+                with me, building things that are useful, sharing what I learn,
+                and using what I know to serve others.
               </p>
             </div>
           </div>
@@ -103,9 +103,9 @@ export const AboutSection = () => {
                 humanity &amp; kindness.
               </p>
               <p>
-                For me, that means building technology that doesn’t stop at
-                the prototype or the laboratory, but finds its way into the
-                real world and makes someone’s life a little better.
+                For me, that means building technology that doesn’t stop at the
+                prototype or the laboratory, but finds its way into the real
+                world and makes someone’s life a little better.
               </p>
             </div>
           </div>
@@ -117,12 +117,14 @@ export const AboutSection = () => {
         {capabilities.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="surface-card h-full flex flex-col gap-3 p-6 text-left md:grid md:row-span-3 md:grid-rows-subgrid md:gap-y-3"
+            className="surface-card h-full flex flex-col gap-3 p-6 text-left md:grid md:row-span-2 md:grid-rows-subgrid md:gap-y-3"
           >
-            <div className="p-2.5 rounded-full bg-primary/10 w-fit">
-              <Icon className="h-5 w-5 text-primary" />
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 rounded-full bg-primary/10 shrink-0">
+                <Icon className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="item-title">{title}</h3>
             </div>
-            <h3 className="item-title">{title}</h3>
             <p className="text-sm text-muted-foreground leading-snug">
               {description}
             </p>
@@ -141,9 +143,9 @@ export const AboutSection = () => {
           <div className="lg:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
             <p>
               Some build machines, some write songs, some paint, some think
-              about problems nobody else has thought about, and some simply
-              find a way to be good to the people around them. What they have
-              in common, at least for me, is not fame or success. It is the way
+              about problems nobody else has thought about, and some simply find
+              a way to be good to the people around them. What they have in
+              common, at least for me, is not fame or success. It is the way
               they choose to spend their lives.
             </p>
             <p>
