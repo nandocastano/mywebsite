@@ -14,7 +14,7 @@ const Out = ({ href, children }) => (
     rel="noopener noreferrer"
     className="text-link"
   >
-    {children} <span aria-hidden="true">↗</span>
+    {children} <span aria-hidden="true">↗︎</span>
   </a>
 );
 
@@ -31,7 +31,7 @@ export const ProjectsSection = () => (
       <SectionHeader
         title="All Projects"
         description="Every project, each with its own technical report."
-        link={{ href: REPO_URL, label: "All on GitHub ↗" }}
+        link={{ href: REPO_URL, label: "All on GitHub ↗︎" }}
       />
       <ol>
         {projects.map((project) => (
@@ -82,7 +82,7 @@ export const ProjectsSection = () => (
         <SectionHeader
           title="Engineering Lab"
           description="Not polished — but real. Simulations, failed prototypes, research notebooks, and tools in progress."
-          link={{ href: GITHUB_URL, label: "GitHub ↗" }}
+          link={{ href: GITHUB_URL, label: "GitHub ↗︎" }}
         />
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">

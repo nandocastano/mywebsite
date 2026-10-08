@@ -41,7 +41,7 @@ export const ListRows = ({ items, emptyMessage = "Coming soon." }) => {
             )}
             {item.href && (
               <span aria-hidden="true" className="shrink-0 text-foreground/60">
-                ↗
+                ↗︎
               </span>
             )}
           </div>

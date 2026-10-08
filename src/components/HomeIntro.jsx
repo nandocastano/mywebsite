@@ -92,7 +92,7 @@ export const HomeIntro = () => {
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
-                  {link.label} ↗
+                  {link.label} ↗︎
                 </a>
               ))}
             </div>
